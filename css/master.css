@@ -1,0 +1,492 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style-type: none;
+}
+a, a:visited{
+    color: inherit;
+    text-decoration: none;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+h1, h2, h3, h4, h6{
+    font-family: 'Merriweather', serif;
+}
+main{
+    width: 100%;
+    height: auto;
+    /* overflow: hidden; */
+}
+.menu{
+    width: 100%;
+    height: 100px;
+    background-color: rgb(255,255,255);
+    display: flex;
+    justify-content: space-evenly;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    background-color: rgba(214, 245, 177, 0.972);
+    z-index: 999;
+}
+.menu>figure{
+    width: 20%;
+    height: 100%;
+}
+.menu>figure>img{
+    width: 100%;
+    height: 100%;
+}
+.menu>ul{
+    width: 45%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.menu>ul>li, .menu>ul>li>a{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+}
+.menu>ul>li{
+    height: 100%;
+}
+.menu>ul>li>a{
+    height: 70%;
+    position: relative;
+    font-weight: bold;
+}
+.menu>ul>li>a::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 15%;
+    width: 0;
+    height: 2px;
+    background-color: rgb(165,206,114);
+    transition: 1s;
+}
+.menu>ul>li>a:hover::before{
+    width: 65%;
+}
+.menu>ul>li>a:hover{
+    color: rgb(165,206,114);
+}
+.menu>div, .menu>div>a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menu>div{
+    width: 15%;
+    height: 100%;
+}
+.menu>div>a{
+    width: 50%;
+    height: 100%;
+}
+.menu>div>a>img{
+    width: 40%;
+    height: 45%;
+}
+/* end menu */
+.mainimage{
+    width: 100%;
+    height: 120vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 140px 50px 100px 50px;
+}
+.mainimage>figure{
+    width: 55%;
+    height: 100%;
+}
+.mainimage>figure>img{
+    width: 100%;
+    height: 100%;
+}
+.mainimage>div{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.mainimage>div>h4, .mainimage>div>h1{
+    text-transform: capitalize;
+}
+.mainimage>div>h4{
+    font-size: 17px;
+}
+.mainimage>div>h1{
+    font-size: 52px;
+    font-weight: bold;
+}
+.mainimage>div>h1, .mainimage>div>button{
+    margin: 20px 0;
+}
+.mainimage>div>button{
+    width: 130px;
+    height: 45px;
+    border: none;
+    background-color: rgb(123,175,66);
+    border-radius: 50px;
+    transition: 1s;
+}
+.mainimage>div>button>a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+    font-size: 14px;
+    text-transform: capitalize;
+}
+.mainimage>div>button>a>img{
+    width: 30px;
+    height: 30px;
+}
+.mainimage>div>button:hover{
+    background-color: rgb(87, 99, 52);
+}
+/* end mainimage */
+.banner{
+    width: 100%;
+    height: 160px;
+    background-color: rgb(253, 240, 204);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 50px 0;
+}
+.banner>div{
+    width: 20%;
+    height: 60%;
+    background-color:rgb(255, 213, 136);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.banner>div>div>h3, .banner>div>div>h4{
+    text-transform: capitalize;
+}
+.banner>div>div>h3{
+    font-size: 16px;
+    font-weight: bold;
+}
+.banner>div>div>h4{
+    font-size: 13px;
+}
+.banner>div>img{
+    position: relative;
+    transition: 1.2s ease-in-out;
+}
+.banner>div:nth-of-type(1)>div{
+    position: absolute;
+    left: 170px;
+}
+.banner>div:nth-of-type(1)>img{
+    position: absolute;
+    left: 95px;
+}
+.banner>div:nth-of-type(1):hover img{
+    position: absolute;
+    left: 95px;
+    animation: truck 1.2s infinite;
+}
+@keyframes truck{
+    from{left: 85px;}
+    to{left: 120px;}
+}
+.banner>div:nth-of-type(2):hover img{
+    transform: rotatey(360deg);
+}
+.banner>div:nth-of-type(3):hover img{
+    animation: dollar 1.2s infinite;
+}
+@keyframes dollar{
+    0% {transform: translateY(-30%);} 
+    50% {transform: translateY(30%);}
+    100% {transform: translateY(-30%);}
+}
+.banner>div:nth-of-type(4):hover img{
+    transform: rotate(360deg);
+}
+/* end banner */
+.product{
+    width: 100%;
+    height: 120vh;
+}
+.product>h2{
+    font-size: 34px;
+    font-weight: bold;
+    text-transform: capitalize;
+    text-align: center;
+    padding: 100px 0;
+}
+.product>section{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 70px;
+}
+.product>section>section{
+    width: 22%;
+    height: 100%;
+}
+.product>section>section>img{
+    width: 100%;
+    height: 38%;
+}
+.product>section>section>h4{
+    font-size: 16px;
+}
+.product>section>section>h5, .product>section>section>del{
+    font-size: 14px;
+    font-weight: bolder;
+}
+.product>section>section>del{
+    color: gray ;
+}
+.product>section>section>h4, .product>section>section>h5{
+    text-transform: capitalize;
+    font-weight: bold;
+}
+.img{
+    position: relative;
+}
+.imghover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    transition: 1s;
+}
+.img:hover .imghover{
+    opacity: 1;
+}
+.product>section>section:nth-of-type(4)::after{
+    content: 'sale!';
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    background-color: rgb(241, 10, 106);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    font-weight: bold;
+    text-transform: capitalize;
+    display: block;
+    padding: 20px 30px 25px 15px;
+    animation: color 4s infinite;
+}
+@keyframes color{
+    form {background-color: rgb(241, 10, 106);}
+    to {background-color: rgb(248, 248, 94);}
+}
+/* end product */
+.announce{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: rgb(248,246,243);
+    display: flex;
+    justify-content: space-evenly;
+}
+.announce>img{
+    display: block;
+    position: absolute;
+    top: -50px;
+    left: 45%;
+}
+.announce>div{
+    width: 25%;
+    height: 60%;
+    position: relative;
+    margin-top: 100px;
+    overflow: hidden;
+}
+.announce>div>img{
+    display: block;
+    width: 350px;
+    height: 100%;
+    margin: 0 auto;
+}
+.announce>div>h3, .announce>div>p{
+    position: absolute;
+    left: 20px;
+}
+.announce>div>h3{
+    top: 10px;
+    font-weight: bold;
+}
+.announce>div>p{
+    width: 300px;
+    top: 30px;
+}
+.announce>div:nth-of-type(1)>img{
+    transition: transform .7s, filter .7s ease-in-out;
+    filter: brightness(85%);
+}
+.announce>div:nth-of-type(1)>img:hover{
+    transform: scale(1.2) rotate(5deg);
+    filter: brightness(100%);
+}
+.announce>div:nth-of-type(2)>img{
+    transition: transform 1.2s, filter 1.2s ease-in-out;
+    filter: brightness(85%);
+}
+.announce>div:nth-of-type(2)>img:hover{
+    transform: scale(1.2) translateY(-10%);
+    filter: brightness(100%);
+}
+.announce>div:nth-of-type(3)>img{
+    transition: transform .5s, filter .7s ease-in-out;
+    transform-origin: 50% 75%;
+    filter: brightness(85%);
+}
+.announce>div:nth-of-type(3)>img:hover{
+    transform: scale(1.5);
+    filter: brightness(100%);
+}
+/* end announce */
+.customer{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: rgb(253, 253, 252);
+}
+.customer::after{
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(../img/logo-leaf2.png);
+    background-size: auto;
+    background-repeat: no-repeat;
+    opacity: .2;
+}
+.customer>h2{
+    font-weight: bold;
+    text-align: center;
+    padding: 60px;
+    font-size: 45px;
+}
+.customer>div{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-evenly;
+}
+.customer>div>div:nth-of-type(1), .customer>div>div:nth-of-type(3){
+    width: 25%;
+    height: 70%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 3px;
+    box-shadow: 2px 2px 10px 2px rgb(245, 219, 172);
+}
+.customer>div>div:nth-of-type(1)>p, .customer>div>div:nth-of-type(3)>p{
+    text-transform: capitalize;
+    font-size: 15px;
+    text-align: center;
+    padding: 30px;
+    font-weight: bold;
+}
+.customer>div>div:nth-of-type(1)>figure, .customer>div>div:nth-of-type(3)>figure{
+    display: flex;
+    align-content: center ;
+    justify-content: center;
+}
+.customer>div>div:nth-of-type(2){
+    width: 30%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.customer>div>div:nth-of-type(2)::after{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/sydney-rae-668606-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 2px 2px 10px 2px rgb(245, 219, 172);
+    filter: brightness(40%);
+}
+.customer>div>div:nth-of-type(2)>h3{
+    font-size: 35px;
+}
+.customer>div>div:nth-of-type(2)>h3, .customer>div>div:nth-of-type(2)>p{
+    padding: 20px;
+    color: white;
+    text-align: center;
+    z-index: 5;
+}
+.customer>div>div:nth-of-type(2)>button{
+    width: 120px;
+    height: 40px;
+    background-color: rgb(123,175,66);
+    border-radius: 20px;
+    text-transform: capitalize;
+    font-weight: bold;
+    border: none;
+    z-index: 6;
+    color: white;
+    text-transform: uppercase;
+}
+/* end customer */
+footer{
+    width: 100%;
+    height: 50vh;
+    background-color: rgb(0,21,36);
+    display: flex;
+}
+footer>figure{
+    width: 50%;
+    height: 100%;
+    padding: 30px 40px;
+}
+footer>figure>figcaption{
+    color: white;
+    text-transform: capitalize;
+    padding-top: 20px;
+}
+footer>div{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+footer>div>div>h3, footer>div>div>p{
+    color: white;
+    text-transform: capitalize;
+}
+footer>div>div>img, footer>div>div>h3, footer>div>div>p{
+    padding: 10px 20px;
+}
+/* end footer */
